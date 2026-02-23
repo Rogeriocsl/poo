@@ -1,8 +1,9 @@
 import java.util.Scanner;
 
 public class ListaRevisao {
+     static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         
         System.out.println("--- BOOTCAMP JAVA: FASE 1 ---");
         System.out.println("Escolha o exercício (1 a 6): ");
@@ -28,7 +29,6 @@ public class ListaRevisao {
         // Peça a LARGURA e a ALTURA (double)
         // Calcule a área (largura * altura)
         // Imprima o resultado
-        Scanner sc = new Scanner(System.in);
 
         double largura = sc.nextDouble();
         double altura = sc.nextDouble();
@@ -102,6 +102,18 @@ public class ListaRevisao {
         // Peça um número de 1 a 7
         // Imprima o dia correspondente (1=Domingo, 2=Segunda...)
         // Se for outro número, imprima "Dia Inválido"
+        Scanner scanner = new Scanner(System.in);
+        int numero = scanner.nextInt();
+        switch(numero){
+            case 1 -> System.out.println("Domingo");
+            case 2 -> System.out.println("Segunda");
+            case 3 -> System.out.println("Terça-Feira");
+            case 4 -> System.out.println("Quarta-Feira");
+            case 5 -> System.out.println("Quinta-Feira");
+            case 6 -> System.out.println("Sexta-feira");
+            case 7 -> System.out.println("Sabado");
+            default -> System.out.println("Dia Invalido");
+        }
     }
 
     // 6. Aprovação Escolar Complexa
@@ -111,5 +123,22 @@ public class ListaRevisao {
         // Se nota >= 7 mas frequência < 75: "Reprovado por Falta"
         // Se nota < 7 e frequência >= 75: "Reprovado por Nota"
         // Caso contrário: "Aprovado"
+
+        Scanner scanner = new Scanner(System.in);
+
+        int nota = scanner.nextInt();
+        int frequencia = scanner.nextInt();
+
+        if( nota >= 7 && frequencia < 75){
+            System.out.println("Reprovado Por falta");
+        }else if(nota < 7 && frequencia >=75){
+            System.out.println("Reprovado por nota");
+        }else if(nota <7 && frequencia <75){
+            System.out.println("Reprovado");
+        }
+        else{
+            System.out.println("Aprovado");
+        }
+
     }
 }
